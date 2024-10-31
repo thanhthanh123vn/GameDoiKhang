@@ -11,7 +11,7 @@ public class SelectPlayGame extends JFrame implements ActionListener {
 
 	String[][] pathsImage = new String[5][10];
 	private JButton[][] buttons;
-	String path = "/img/3";
+	String path = "/img/man1";
 	JLabel play1Lable, play2Label;
 	private boolean isPlay1, isPlay2;
 	private int play1Row = 0, play1Col = 0; // Initial position for Player 1
@@ -30,6 +30,7 @@ public class SelectPlayGame extends JFrame implements ActionListener {
 		loadPath(path);
 
 		// Set up panels
+		
 		this.add(NorthPanel(), BorderLayout.NORTH);
 		this.add(initComponment(), BorderLayout.CENTER);
 
@@ -120,8 +121,8 @@ public class SelectPlayGame extends JFrame implements ActionListener {
 		label2.setFont(font);
 		label2.setForeground(Color.RED);
 
-		play1Lable = new JLabel(new ImageIcon(getClass().getResource("/img/4" + ".png")));
-		play2Label = new JLabel(new ImageIcon(getClass().getResource("/img/4" + ".png")));
+		play1Lable = new JLabel(new ImageIcon(getClass().getResource("/img/man2" + ".gif")));
+		play2Label = new JLabel(new ImageIcon(getClass().getResource("/img/man2" + ".gif")));
 
 		panel1.add(play1Lable);
 		panel1.add(label1);
@@ -138,7 +139,7 @@ public class SelectPlayGame extends JFrame implements ActionListener {
 	public void loadPath(String path) {
 		for (int i = 0; i < pathsImage.length; i++) {
 			for (int j = 0; j < pathsImage[i].length; j++) {
-				pathsImage[i][j] = path + ".png";
+				pathsImage[i][j] = path + ".gif";
 			}
 		}
 	}
@@ -217,18 +218,6 @@ public class SelectPlayGame extends JFrame implements ActionListener {
 		this.isPlay2 = isPlay2;
 	}
 
-	public static void main(String[] args) {
-		String[] player1Frames = { "D:\\LTCB\\GameDoiKhang\\src\\img\\play1right.gif",
-				"D:\\LTCB\\GameDoiKhang\\src\\img\\play1left.gif",
-				"D:\\LTCB\\GameDoiKhang\\src\\img\\play1attackright.gif",
-				"D:\\LTCB\\GameDoiKhang\\src\\img\\play1attackleft.gif"
-
-		};
-		Player play1 = new Player(200, 250, 50, 50, 100, 10, Color.red);
-		play1.loadFrames(player1Frames);
-		Player play2 = new Player(400, 250, 50, 50, 100, 10, Color.red);
-		play2.loadFrames(player1Frames);
-		new SelectPlayGame(play1, play2);
-	}
+	
 
 }

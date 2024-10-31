@@ -5,6 +5,7 @@
 package game;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
@@ -53,7 +54,8 @@ public class StartGame extends javax.swing.JFrame {
 	@SuppressWarnings("unchecked")
 	// <editor-fold defaultstate="collapsed" desc="Generated Code">
 	private void initComponents() {
-
+		this.setSize(new Dimension(1000, 800));
+		this.setLocationRelativeTo(null);
 		jMenuBar1 = new javax.swing.JMenuBar();
 		jMenu1 = new javax.swing.JMenu();
 		jMenu2 = new javax.swing.JMenu();
@@ -142,7 +144,7 @@ public class StartGame extends javax.swing.JFrame {
 				.addComponent(jLabel2)
 				.addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
 
-		pack();
+		
 	}
 	  @Override
 	    public void paint(Graphics g) {
